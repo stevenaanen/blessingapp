@@ -129,7 +129,7 @@ var app = function(){
 				   }
 				   else {
 				      console.log(link)
-				      console.log('error');
+				      console.log('error in loadStylesheet');
 				      // code to execute if the style sheet failed to successfully
 				   }
 				},this);
