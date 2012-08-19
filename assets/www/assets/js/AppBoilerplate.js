@@ -87,7 +87,8 @@ var app = function(){
 			var javascript_required = module_name +'.js'
 			
 			if(app.url_path === ''){
-				app.url_path = window.location.href.replace(/app\/.*?$/, '').replace('index.html','');
+// 				app.url_path = window.location.href.replace(/app\/.*?$/, '').replace('index.html',''); // caused bug, changed by @steven
+				app.url_path = window.location.href.replace(/\/app\/.*?$/, '/').replace('index.html','');
 			}
 			
 			console.log(app.url_path);
