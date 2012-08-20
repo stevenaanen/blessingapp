@@ -1,45 +1,78 @@
-<!DOCTYPE html> 
-<html> 
-	<head>
-		<meta charset="utf-8">
-		<title>App Name</title> 
-		
-        <!--  Mobile Viewport Fix
-        j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag 
-        device-width : Occupy full width of the screen in its current orientation
-        initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-        maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
-        -->
-        <!-- Uncomment to use; use thoughtfully!
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-        -->		
-		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<!--
+	jQuery Mobile Boilerplate
+	index.html
+-->
+<!doctype html>
+<html>
+<head>
+	<title> jQuery Mobile Boilerplate </title>
 
-		<script type="text/javascript" charset="utf-8" src="assets/js/cordova-2.0.0.js"></script>
-		<link rel="stylesheet" href="assets/css/jquery.mobile-1.1.1.css" />
-		<link rel="stylesheet" href="assets/css/AppBoilerplate.css" />
-	</head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+
+<!-- Home screen icon  Mathias Bynens mathiasbynens.be/notes/touch-icons -->
+	<!-- For iPhone 4 with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon.png">
+	<!-- For first-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon.png">
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+	<!-- For nokia devices and desktop browsers : -->
+	<link rel="shortcut icon" href="favicon.ico" />
+	
+	<!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+	<meta http-equiv="cleartype" content="on">
+
+	<!-- jQuery Mobile CSS bits -->
+	<link rel="stylesheet" href="assets/css/jquery.mobile-1.1.1.min.css" />
+
+	<!-- Custom css -->
+	<link rel="stylesheet" href="assets/css/custom.css" />
+
+	<!-- Javascript includes -->
+	<script src="assets/js/jquery-1.8.0.min.js"></script>
+	<script src="assets/js/mobileinit.js"></script>
+	<script src="assets/js/ios-orientationchange-fix.min.js"></script>
+	<script src="assets/js/jquery.mobile-1.1.1.min.js"></script>
+	<script src="assets/js/application.js"></script>
+	<!-- Add a Bookmark Bubble for iDevices, and adds a cookie if already shown -->
+	<script type="text/javascript" src="assets/js/bookmark_bubble.js"></script>
+	<script type="text/javascript" src="assets/js/example.js"></script>
+	<script src="assets/js/jquery.cookie.js"></script>
+	<!-- Startup Images for iDevices -->
+	<script>(function(){var a;if(navigator.platform==="iPad"){a=window.orientation!==90||window.orientation===-90?"assets/images/spash/images/startup-tablet-landscape.png":"assets/images/spash/images/startup-tablet-portrait.png"}else{a=window.devicePixelRatio===2?"assets/images/spash/images/startup-retina.png":"assets/images/spash/images/startup.png"}document.write('<link rel="apple-touch-startup-image" href="'+a+'"/>')})()</script>
+	<!-- The script prevents links from opening in mobile safari. https://gist.github.com/1042026 -->
+	<script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
+</head> 
 <body> 
-	
-	<div data-role="page" data-module="bootstrap">
-	
-		<div data-role="header" data-position="fixed">
-			<h1>AppBoilerplate</h1>
+	<div data-role="page">
+
+		<div data-role="header">
+			<h1>jQuery Mobile Boilerplate 1.1</h1>
 		</div>
-	
-		<div data-role="content">	
-			<p>AppBoilerplate is currently loading</p>		
-		</div><!-- /content -->
+
+		<div data-role="content">
 		
-		<div data-role="footer" data-position="fixed">
-			<h1>based on AppBoilerplate</h1>
+			<ul data-role="listview" data-inset="true" data-theme="c" data-dividertheme="b">
+				<li data-role="list-divider">Snippet Pages</li>
+				<li><a href="snippets/buttons.html">Buttons</a></li>
+				<li><a href="snippets/grids.html">Grids</a></li>
+				<li><a href="snippets/collapsibles.html">Collapsible Boxes</a></li>
+				<li><a href="snippets/collapsible-sets.html">Collapsible Sets</a></li>
+				<li><a href="snippets/forms.html">Form Elements</a></li>
+				<li><a href="snippets/lists.html">List Views</a></li>
+			</ul>
+
 		</div>
-	
-	</div><!-- /page -->
-	
-	<script src="assets/js/libs/jquery-1.8.0.min.js"></script>
-	<script src="assets/js/libs/jquery.mobile-1.1.1.min.js"></script>
-	<script src="assets/js/libs/require.js"></script>
-	<script src="assets/js/AppBoilerplate.js"></script>
+		
+		<div data-role="footer" data-theme="c">
+			<p>&copy; 2012 - jQuery Mobile Boilerplate</p>
+		</div>	
+		
+	</div>
 </body>
 </html>
